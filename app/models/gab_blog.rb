@@ -1,0 +1,2 @@
+class GabBlog < ApplicationRecord
+end
