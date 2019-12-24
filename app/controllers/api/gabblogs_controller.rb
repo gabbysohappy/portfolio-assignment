@@ -1,10 +1,10 @@
 class Api::GabblogsController < ApplicationController
     def index
-        render json: Gabblog.all
+        render json: GabBlog.all
     end
 
     def create
-        @gabblog = Gabblog.new(gabblog_params)
+        @gabblog = GabBlog.new(gabblog_params)
         if @gabblog.save
             render json: @gabblog
         else
@@ -13,7 +13,7 @@ class Api::GabblogsController < ApplicationController
     end
 
     def update
-        @gabblog = Gabblog.find(params[:id])
+        @gabblog = GabBlog.find(params[:id])
         if @gabblog.update(gabblog_params)
             render json: @gabblog
         else
@@ -22,7 +22,7 @@ class Api::GabblogsController < ApplicationController
     end
 
     def destroy
-        Gabblog.find(params[:id]).destroy
+        GabBlog.find(params[:id]).destroy
         render json: { message: 'Blog entry deleted'}
     end
 
