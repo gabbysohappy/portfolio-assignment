@@ -1,7 +1,7 @@
 import React from 'react';
 import Blog from './Blog';
 
-const BlogList = ({ blogs, deleteBlog, updateBlog }) => (
+const BlogList = ({blogs, deleteBlog, updateBlog}) => (
 
     <div>
     <ul>

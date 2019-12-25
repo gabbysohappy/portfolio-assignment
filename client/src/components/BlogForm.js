@@ -23,18 +23,15 @@ class BlogForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     if (this.props.id) {
-      this.props.updateBlog( this.props.id, this.state )
-      this.props.toggleEdit()
-    } else {
+      this.props.updateBlog(this.props.id, this.state)
+      this.props.toggleEdit() 
+    } 
+    else {
       this.props.addBlog(this.state)
       this.props.toggleAdd()
     }
-    this.setState({ 
-      title: '',
-      body: '',
-      tags: ''
-    })
-  }
+    this.setState({ title: '', body: '', tags: '' })
+    }
 
   render() {
     const { title, body, tags } = this.state

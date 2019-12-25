@@ -1,0 +1,82 @@
+#box1 {
+  height: 500px;
+  width: 100%;
+}
+
+.section-header, .user-instructions {
+  text-align: center;
+}
+
+.user-instructions {
+  font-size: medium;
+}
+
+.ven-container {
+  visibility: hidden;
+  font-size: medium;
+}
+
+.qa-skills {
+  z-index: -1;
+  position: absolute;
+  bottom: 11%;
+  left: 25%;
+}
+
+.combined-skills {
+  z-index: -3;
+  position: absolute;
+  bottom: 8%;
+  left: 42%;
+}
+
+.dev-skills {
+  z-index: -2;
+  position: absolute;
+  bottom: 8%;
+  left: 57%;
+}
+
+.ven {
+  z-index: -4;
+  left: 25%;
+  position: absolute;
+}
+
+#circle1 {
+  z-index: 0;
+  position: absolute;
+  left: 15%;
+  width: 400px;
+  height: 400px;
+  background: lavender;
+  border-radius: 50%;
+  line-height: 400px;
+  text-align: center;
+  font-size: x-large;
+}
+
+#circle2 {
+  z-index: -5;
+  position: absolute;
+  right: 15%;
+  width: 400px;
+  height: 400px;
+  background: paleturquoise;
+  border-radius: 50%;
+  line-height: 400px;
+  font-size: x-large;
+  text-align: center;
+}
+
+#box1:hover > #circle1 {
+  display: none;
+}
+
+#box1:hover > #circle2 {
+  display: none;
+}
+
+#box1:hover > .ven-container {
+  visibility: visible;
+}

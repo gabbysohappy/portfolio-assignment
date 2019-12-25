@@ -1,10 +1,23 @@
 import React from 'react';
-import { Header } from 'semantic-ui-react';
+import About from './About';
+import Skills from './Skills';
+import Portfolio from './Portfolio';
+import Work from './Work';
 
 const Home = () => (
 
   <>
-    <Header>Home page</Header>
+    <About />
+    
+    <Work />
+
+    
+
+    <Skills />
+
+    <Portfolio />
+
+
   </>
 )
 

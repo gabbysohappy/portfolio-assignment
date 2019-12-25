@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, Icon } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import BlogEdit from './BlogEdit';
 
-const Blog = ({ id, title, body, tags, deleteBlog, updateBlog }) => (
- <div>
-     <h4>{title}</h4>
-     <p>{body} <br />
-     {tags}</p>
-     <Link to={{ pathname: `/BlogEdit/${id}`,
-     state: {title, body, tags} 
-    }}>Edit</Link>
-     <Button color='red' onClick={ () => deleteBlog(id) }>
-        <Icon name='trash' />
-      </Button>
- </div>
-)
+class Blog extends Component {
+    state = { editing: false }
+
+    toggleEdit = () => this.setState({ editing: !this.state.editing })
+
+    render() {
+    const { id } = this.props
+    const { title, body, tags } = this.props
+    const { editing } = this.state
+    const { deleteBlog } = this.props
+    return(
+        <>
+            <h4>{title}</h4>
+            <p>{body} <br />
+            {tags}</p>
+
+            <Button color='red' onClick={ () => deleteBlog(id) }>
+            <Icon name='trash' />
+            </Button>              
+        {
+            editing
+            ?
+            <BlogEdit {...this.props} />
+            :
+            <Button onClick={ () => this.toggleEdit() }>
+            <Icon name='pencil' />
+            </Button>    
+        }
+    </>
+    )
+    }
+}
 
 export default Blog;
-

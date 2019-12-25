@@ -14,7 +14,8 @@ const App = () => (
     <Container>
     <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/Blog' component={BlogIndex} />
+          <Route exact path='/blog' component={BlogIndex} />
+          <Route exact path='/BlogEdit/:id' component={BlogEdit} />
           <Route component={PageNotFound} />
     </Switch>
     </Container>

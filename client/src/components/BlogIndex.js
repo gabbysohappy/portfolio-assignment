@@ -69,7 +69,7 @@ class BlogIndex extends Component {
           :
           <button onClick={this.toggleAdd}>New Blog</button>
         }
-       <BlogList blogs={this.state.blogs} deleteBlog={this.deleteBlog} updateBlog={this.updateBlog} />
+       <BlogList blogs={this.state.blogs} updateBlog={this.updateBlog} deleteBlog={this.deleteBlog}/>
        </>
   )}
 }
