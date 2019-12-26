@@ -5,19 +5,14 @@ import Portfolio from './Portfolio';
 import Work from './Work';
 
 const Home = () => (
-
   <>
     <About />
     
     <Work />
 
-    
-
     <Skills />
 
     <Portfolio />
-
-
   </>
 )
 

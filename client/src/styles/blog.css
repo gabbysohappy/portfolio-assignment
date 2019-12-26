@@ -1,0 +1,18 @@
+.blog-header, .add-blog { 
+    padding-left: 100px;
+}
+
+.blog-list {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.blog-entry {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-style: groove;
+    border-radius: 5px;
+    background-color: white;
+}

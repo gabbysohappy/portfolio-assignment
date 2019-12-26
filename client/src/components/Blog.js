@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Icon } from 'semantic-ui-react';
-import BlogEdit from './BlogEdit';
+import BlogForm from './BlogForm';
+import '../styles/blog.css';
 
 class Blog extends Component {
     state = { editing: false }
@@ -8,31 +9,32 @@ class Blog extends Component {
     toggleEdit = () => this.setState({ editing: !this.state.editing })
 
     render() {
-    const { id } = this.props
-    const { title, body, tags } = this.props
+    const { deleteBlog, id, title, body, created_at } = this.props
     const { editing } = this.state
-    const { deleteBlog } = this.props
-    return(
-        <>
-            <h4>{title}</h4>
-            <p>{body} <br />
-            {tags}</p>
-
-            <Button color='red' onClick={ () => deleteBlog(id) }>
-            <Icon name='trash' />
-            </Button>              
+    return(  
+        <div class='blog-entry'>  
         {
-            editing
-            ?
-            <BlogEdit {...this.props} />
-            :
-            <Button onClick={ () => this.toggleEdit() }>
-            <Icon name='pencil' />
+          editing
+          ?
+          <BlogForm {...this.props} />
+          :
+          <>
+            <h3>{title}</h3>
+            <p><i>{created_at}</i></p>
+            <p>{body}</p>
+            <div class='blog-buttons'>
+            <Button class='edit-blog-button' color='violet' onClick={ () => this.toggleEdit() }>
+              <Icon name='pencil' />
             </Button>    
-        }
-    </>
-    )
-    }
+            <Button class='delete-blog-button' color='pink' onClick={ () => deleteBlog(id) }>
+              <Icon name='trash' />
+            </Button>
+            </div>
+        </>
+       } 
+       </div>      
+   )
+  }
 }
 
 export default Blog;

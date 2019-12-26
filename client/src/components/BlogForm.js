@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
+import '../styles/blog.css';
 
 class BlogForm extends Component {
   state = { 
@@ -55,7 +57,7 @@ class BlogForm extends Component {
           onChange={this.handleChange}
           label='Tags'
         />
-        <button type='submit'>Submit</button>
+        <Button type='submit'>Submit</Button>
       </Form>
     )
   }
