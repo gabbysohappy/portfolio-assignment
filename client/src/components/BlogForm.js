@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
-import { Button } from 'semantic-ui-react';
 import '../styles/blog.css';
 
 class BlogForm extends Component {
   state = { 
     title: '', 
-    body: '', 
-    tags: ''
+    body: ''
   }
 
   componentDidMount() {
     if (this.props.id) {
-      const { title, body, tags } = this.props
-      this.setState({ title, body, tags })
+      const { title, body } = this.props
+      this.setState({ title, body })
     }
   }
 
@@ -32,12 +30,13 @@ class BlogForm extends Component {
       this.props.addBlog(this.state)
       this.props.toggleAdd()
     }
-    this.setState({ title: '', body: '', tags: '' })
+    this.setState({ title: '', body: ''})
     }
 
   render() {
-    const { title, body, tags } = this.state
+    const { title, body } = this.state
     return(
+      <div class='blogForm'>
       <Form onSubmit={this.handleSubmit}>
         <Form.Input
           name='title'
@@ -51,14 +50,9 @@ class BlogForm extends Component {
           onChange={this.handleChange}
           label='Body'
         />
-        <Form.Input
-          name='tags'
-          value={tags}
-          onChange={this.handleChange}
-          label='Tags'
-        />
-        <Button type='submit'>Submit</Button>
+        <button class='submit-button' type='submit'>Submit</button>
       </Form>
+      </div>
     )
   }
 }

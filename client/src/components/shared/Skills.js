@@ -19,7 +19,7 @@ const Skills = () => (
   <div class='qa-skills'>
     <ul>
     <li>Cypress.io</li>
-    <li>Selenium WebDriver</li>
+    <li>Selenium</li>
     <li>JIRA/jQuery</li>
     </ul>
     </div>

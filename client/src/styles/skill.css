@@ -1,6 +1,8 @@
 #box1 {
   height: 500px;
   width: 100%;
+  padding-top: 3%;
+  padding-bottom: 8%;
 }
 
 .section-header, .user-instructions {
@@ -16,25 +18,32 @@
   font-size: medium;
 }
 
+.ven-container ul {
+  list-style-type: none;
+}
+
 .qa-skills {
+  text-align: center;
   z-index: -1;
   position: absolute;
-  bottom: 11%;
-  left: 25%;
+  left: 28%;
+  bottom: -43%;
 }
 
 .combined-skills {
+  text-align: center;
   z-index: -3;
   position: absolute;
-  bottom: 8%;
-  left: 42%;
+  left: 40%;
+  bottom: -45%;
 }
 
 .dev-skills {
+  text-align: center;
   z-index: -2;
   position: absolute;
-  bottom: 8%;
-  left: 57%;
+  left: 55%;
+  bottom: -45%;
 }
 
 .ven {

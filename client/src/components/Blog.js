@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button, Icon } from 'semantic-ui-react';
 import BlogForm from './BlogForm';
 import '../styles/blog.css';
 
@@ -23,12 +22,12 @@ class Blog extends Component {
             <p><i>{created_at}</i></p>
             <p>{body}</p>
             <div class='blog-buttons'>
-            <Button class='edit-blog-button' color='violet' onClick={ () => this.toggleEdit() }>
-              <Icon name='pencil' />
-            </Button>    
-            <Button class='delete-blog-button' color='pink' onClick={ () => deleteBlog(id) }>
-              <Icon name='trash' />
-            </Button>
+            <button class='edit-blog-button' onClick={ () => this.toggleEdit() }>
+              Edit
+            </button>    
+            <button class='delete-blog-button' onClick={ () => deleteBlog(id) }>
+             Delete
+            </button>
             </div>
         </>
        } 

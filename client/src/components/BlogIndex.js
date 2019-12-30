@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'semantic-ui-react';
 import axios from 'axios';
 import BlogList from './BlogList';
 import BlogForm from './BlogForm';
@@ -63,14 +62,14 @@ class BlogIndex extends Component {
       const { adding } = this.state
       
       return( 
-       <div class='blogPage'>
+       <div class='blog-page'>
        <h1 class='blog-header'>Recent Posts</h1>
         <div class='add-blog'>
        {
           adding ?
           <BlogForm addBlog={this.addBlog} toggleAdd={this.toggleAdd} />
           :
-          <Button color='teal' onClick={this.toggleAdd}>New Blog</Button>
+          <button class='add-blog-button' color='teal' onClick={this.toggleAdd}>New Blog</button>
         }
         </div>
        <BlogList blogs={this.state.blogs} updateBlog={this.updateBlog} deleteBlog={this.deleteBlog}/>

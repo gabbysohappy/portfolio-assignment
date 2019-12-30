@@ -5,10 +5,10 @@ import Home from './components/shared/Home';
 import BlogIndex from './components/BlogIndex';
 import PageNotFound from './components/shared/PageNotFound';
 import Navbar from './components/shared/Navbar';
+import './styles/App.css'
 
 const App = () => (
-  
-    <>
+  <div>
     <Navbar />
     <Container>
     <Switch>
@@ -17,7 +17,7 @@ const App = () => (
           <Route component={PageNotFound} />
     </Switch>
     </Container>
-    </>
+    </div>
   )
 
   export default App;
