@@ -1,7 +1,65 @@
 .portfolio h2 {
     text-align: center;
-    margin: 0;
+}
+
+.hover-text {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio {
     background-color: lavender;
-    padding-bottom: 5%;
     padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.spiderly-container {
+   padding: 30px;
+   position: relative;
+   text-align: center;
+   color: white;
+   font-size: xx-large;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.img-web {
+   height: 300px;
+   width: 300px;
+   transition: .5s ease;
+   backface-visibility: hidden;
+   border-radius: 50%;
+}
+
+.spiderly {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.in-progress {
+    font-size: medium;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spiderly-container:hover > .hover-text {
+    visibility: visible;
+}
+
+.spiderly-container:hover > .img-web {
+    opacity: 0.3;
+}
+
+.spiderly-container:hover > .in-progress {
+    opacity: 0.3;
+}
+
+.spiderly-container:hover > .spiderly {
+    opacity: 0.3;
 }
