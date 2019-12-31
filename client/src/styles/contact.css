@@ -1,0 +1,43 @@
+.contact {
+    background-color: lavenderblush;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.contact img {
+    height: 90px;
+    width: 90px;
+}
+
+.contact-links {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gmail-img {
+    height: 90px;
+}
+
+.twitter-img, .linkedin-img {
+    height: 90px;
+    width: 90px;
+}
+
+.contact-links a {
+    padding: 3%;
+}
+
+.twitter-img:hover {
+    transform: scale(1.07);
+}
+
+.linkedin-img:hover {
+    transform: scale(1.07);
+}
+
+.gmail-img:hover {
+    transform: scale(1.07);
+}

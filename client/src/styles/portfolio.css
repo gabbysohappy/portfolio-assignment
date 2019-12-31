@@ -1,65 +1,87 @@
+.portfolio {
+    padding: 3%;
+    background-color: paleturquoise;
+}
+
+.portfolio-container {
+    padding: 3%;
+    display: flex;
+}
+
+.spiderly-container {
+    flex: 0 55%;
+}
+
+.doctor-container {
+    flex: 0;
+}
+
+.portfolio p {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.portfolio a {
+    font-size: medium;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .portfolio h2 {
     text-align: center;
 }
 
-.hover-text {
-    visibility: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.spiderly-container, .doctor-container {
+    text-align: center;
+    position: relative;
 }
 
-.portfolio {
-    background-color: lavender;
-    padding-top: 3%;
-    padding-bottom: 5%;
-}
-
-.spiderly-container {
-   padding: 30px;
-   position: relative;
-   text-align: center;
-   color: white;
-   font-size: xx-large;
-   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.img-web {
-   height: 300px;
+.img-web, .img-doctor {
    width: 300px;
+   height: 300px;
    transition: .5s ease;
    backface-visibility: hidden;
    border-radius: 50%;
 }
 
-.spiderly {
+.spiderly-name {
+    font-weight: bold;
+    font-size: x-large;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.in-progress {
-    font-size: medium;
+.doctor-office-name {
+    font-weight: bold;
+    font-size: x-large;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hover-text-spidery, .hover-text-doctor {
+    font-weight: bold;
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.spiderly-container:hover > .hover-text {
-    visibility: visible;
-}
-
 .spiderly-container:hover > .img-web {
     opacity: 0.3;
 }
 
-.spiderly-container:hover > .in-progress {
+.spiderly-container:hover > .spiderly-name {
     opacity: 0.3;
 }
 
-.spiderly-container:hover > .spiderly {
+.doctor-container:hover > .img-doctor {
+    opacity: 0.3;
+}
+
+.doctor-container:hover > .doctor-office-name {
     opacity: 0.3;
 }
