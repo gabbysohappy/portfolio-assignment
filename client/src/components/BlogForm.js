@@ -48,7 +48,8 @@ class BlogForm extends Component {
         />
         </div>
         <div class='body'>
-        <Form.Input
+        <Form.TextArea 
+          rows='8'
           name='body'
           value={body}
           onChange={this.handleChange}

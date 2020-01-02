@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import BlogForm from './BlogForm';
 import moment from 'moment'
 import '../styles/blog.css';
@@ -25,6 +26,10 @@ class Blog extends Component {
             <h3>{title}</h3>
             <p><i>{date}</i></p>
             <p>{body}</p>
+            <div class='bottom-links'>
+            <NavLink exact to='/posts' class='comments-link'>
+              Comments
+            </NavLink>
             <div class='blog-buttons'>
             <button class='edit-blog-button' onClick={ () => this.toggleEdit() }>
               Edit
@@ -32,6 +37,7 @@ class Blog extends Component {
             <button class='delete-blog-button' onClick={ () => deleteBlog(id) }>
              Delete
             </button>
+            </div>
             </div>
         </>
        } 

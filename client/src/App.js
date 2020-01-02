@@ -5,6 +5,7 @@ import Home from './components/shared/Home';
 import BlogIndex from './components/BlogIndex';
 import PageNotFound from './components/shared/PageNotFound';
 import Navbar from './components/shared/Navbar';
+import Posts from './components/Posts';
 import './styles/App.css'
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
     <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/blog' component={BlogIndex} />
+          <Route exact path='/gabblog_id/posts' component={Posts} />
           <Route component={PageNotFound} />
     </Switch>
     </Container>
