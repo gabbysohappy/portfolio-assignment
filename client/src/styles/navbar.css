@@ -43,7 +43,3 @@
 .navbar li:hover, .navbar li a:hover {
     color: darkorchid;
 }
-
-.navbar li.active {
-    background-color: lavender;
-}

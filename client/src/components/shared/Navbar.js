@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../../styles/navbar.css'
 
 const Navbar = () => (
   <div class='navbar'>
   <img src={require('../../images/logo1.png')} alt='gabby-logo' class='logo'/>
   <ul>
-    <li><Link exact to='/'>
+    <li><NavLink exact to='/' activeStyle={{ color: '#FF00ED' }}>
         Home
-    </Link></li>
-    <li><Link exact to='/Blog'>
+ </NavLink></li>
+    <li><NavLink exact to='/Blog' activeStyle={{ color: '#FF00ED' }}>
         Blog
-    </Link></li>
+    </NavLink></li>
   </ul>
   </div>
 )

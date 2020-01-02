@@ -65,9 +65,9 @@ class BlogIndex extends Component {
        <div class='blog-page'>
        <h1 class='blog-header'>Recent Posts</h1>
         <div class='add-blog'>
-       {
+       {  
           adding ?
-          <BlogForm addBlog={this.addBlog} toggleAdd={this.toggleAdd} />
+          <div class='adding-blog'><BlogForm addBlog={this.addBlog} toggleAdd={this.toggleAdd} /></div>
           :
           <button class='add-blog-button' color='teal' onClick={this.toggleAdd}>New Blog</button>
         }

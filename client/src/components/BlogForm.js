@@ -36,20 +36,26 @@ class BlogForm extends Component {
   render() {
     const { title, body } = this.state
     return(
-      <div class='blogForm'>
+      <div class='blog-form'>
       <Form onSubmit={this.handleSubmit}>
+       <div class='title'>
         <Form.Input
           name='title'
           value={title}
           onChange={this.handleChange}
           label='Title'
+          required
         />
+        </div>
+        <div class='body'>
         <Form.Input
           name='body'
           value={body}
           onChange={this.handleChange}
           label='Body'
+          required
         />
+        </div>
         <button class='submit-button' type='submit'>Submit</button>
       </Form>
       </div>

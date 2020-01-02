@@ -5,10 +5,13 @@
 
 .blog-header {
     padding-top: 30px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color:white;
 }
 
 .blog-page {
     padding-bottom: 50px;
+    background-color: teal;
 } 
 
 .blog-entry {
@@ -17,7 +20,8 @@
     margin-right: 80px;
     padding: 20px;
     border-style: groove;
-    border-radius: 10px;
+    border-radius: 1px;
+    border-color: #008080;
     background-color: white;
 }
 
@@ -32,8 +36,27 @@
     cursor: pointer;
 }
 
+.adding-blog {
+    margin-top: 30px;
+    margin-right: 80px;
+    padding: 20px;
+    border-style: groove;
+    border-radius: 10px;
+    
+    background-color: white;
+}
+
+.blog-form {
+    padding: 10px;
+}
+
+.blog-form .title, .body {
+    padding: 10px;
+}
+
 .add-blog-button, .submit-button {
     background-color: paleturquoise;
+    margin-left: 10px;
 }
 
 .edit-blog-button {
@@ -41,7 +64,7 @@
 }
 
 .delete-blog-button {
-    background-color: lavenderblush;
+    background-color: #fce7f9;
 }
 
 .blog-buttons {
