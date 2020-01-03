@@ -13,11 +13,11 @@ const App = () => (
     <Navbar />
     <Container>
     <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/blog' component={BlogIndex} />
-          <Route exact path='/posts' component={Posts} />
-          <Route exact path='/blogs/:blog_id/posts' component={Posts} />
-          <Route component={PageNotFound} />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/blog' component={BlogIndex} />
+        <Route exact path='/posts' component={Posts} />
+        <Route exact path='/blogs/:blog_id/posts' component={Posts} />
+        <Route component={PageNotFound} />
     </Switch>
     </Container>
     </div>
