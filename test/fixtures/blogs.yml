@@ -2,10 +2,8 @@
 
 one:
   title: MyString
-  body: MyString
-  tags: MyString
+  body: MyText
 
 two:
   title: MyString
-  body: MyString
-  tags: MyString
+  body: MyText

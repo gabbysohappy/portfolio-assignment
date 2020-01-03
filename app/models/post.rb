@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-  belongs_to :GabBlog
+  belongs_to :blog
 end

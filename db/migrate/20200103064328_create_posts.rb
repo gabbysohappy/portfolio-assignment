@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
     create_table :posts do |t|
       t.string :author
       t.text :body
-      t.belongs_to :gab_blog, null: false, foreign_key: true
+      t.belongs_to :blog, null: false, foreign_key: true
 
       t.timestamps
     end

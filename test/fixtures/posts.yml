@@ -3,9 +3,9 @@
 one:
   author: MyString
   body: MyText
-  GabBlog: one
+  blog: one
 
 two:
   author: MyString
   body: MyText
-  GabBlog: two
+  blog: two
