@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import '../../styles/navbar.css'
 
 const Navbar = () => (
-  <div class='navbar'>
-  <img src={require('../../images/logo1.png')} alt='gabby-logo' class='logo'/>
+  <div className='navbar'>
+  <img src={require('../../images/logo1.png')} alt='gabby-logo' className='logo'/>
   <ul>
     <li><NavLink exact to='/' activeStyle={{ color: '#FF00ED' }}>
         Home

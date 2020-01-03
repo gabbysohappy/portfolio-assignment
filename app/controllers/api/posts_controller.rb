@@ -1,5 +1,4 @@
 class Api::PostsController < ApplicationController
-class Api::CommentsController < ApplicationController
     before_action :set_blog
 
     def index
@@ -10,7 +9,6 @@ class Api::CommentsController < ApplicationController
         @post = @blog.posts.new(posts_params)
         if @post.save
             render json: @post
-
         else
             render json: { errors: @post.errors }, status: :unprocessable_entity
         end
@@ -36,6 +34,6 @@ class Api::CommentsController < ApplicationController
         end
 
         def set_blog
-            @blog = GabBlog.find(params[:blog_id])
+            @blog = Blog.find(params[:blog_id])
         end
 end

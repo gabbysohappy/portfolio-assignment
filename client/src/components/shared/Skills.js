@@ -4,8 +4,8 @@ import '../../styles/skill.css';
 const Skills = () => (
   <>
   <div id='box1'>
-  <h2 class='section-header'>Recently Applied Skills</h2>
-  <p class='user-instructions'><i>-Hover Mouse-</i></p>
+  <h2 className='section-header'>Recently Applied Skills</h2>
+  <p className='user-instructions'><i>-Hover Mouse-</i></p>
 
   <circle id='circle1'>
     QA Skills
@@ -14,16 +14,16 @@ const Skills = () => (
     Developer Skills
   </circle>
 
-  <div class='ven-container'>
-  <img class='ven' src={require('../../images/ven3.png')} alt='ven-diagram'/>
-  <div class='qa-skills'>
+  <div className='ven-container'>
+  <img className='ven' src={require('../../images/ven3.png')} alt='ven-diagram'/>
+  <div className='qa-skills'>
     <ul>
     <li>Cypress.io</li>
     <li>Selenium</li>
     <li>JIRA/jQuery</li>
     </ul>
     </div>
-  <div class='combined-skills'>
+  <div className='combined-skills'>
   <ul>
     <li>SQL/PostgreSQL</li>
     <li>Git/Github</li>
@@ -31,7 +31,7 @@ const Skills = () => (
     <li>C#</li>
     </ul>
   </div>
-  <div class='dev-skills'>
+  <div className='dev-skills'>
   <ul>
     <li>Ruby on Rails</li>
     <li>React.js</li>

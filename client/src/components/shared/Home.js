@@ -7,13 +7,13 @@ import Contact from './Contact';
 
 const Home = () => (
   <>
-    <div class='contact-about-section'>
+    <div className='contact-about-section'>
     <About />
     <Contact />
     </div>
 
     <Skills />
-    
+
     <Work />
 
     <Portfolio />

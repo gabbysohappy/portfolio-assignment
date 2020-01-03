@@ -9,7 +9,7 @@ class BlogIndex extends Component {
   state = { blogs: [], adding: false }
 
   componentDidMount() {
-      axios.get('/api/gabblogs')
+      axios.get('/api/blogs')
       .then( res => {
           this.setState({ blogs: res.data })
       })
@@ -21,7 +21,7 @@ class BlogIndex extends Component {
   toggleAdd = () => this.setState({ adding: !this.state.adding })
 
   addBlog = (blog) => {
-      axios.post('/api/gabblogs', blog )
+      axios.post('/api/blogs', blog )
       .then( res => {
           const { blogs } = this.state
           this.setState({ blogs: [...blogs, res.data ]})
@@ -32,7 +32,7 @@ class BlogIndex extends Component {
   }
 
   updateBlog = (id, blog) => {
-      axios.put(`/api/gabblogs/${id}`, blog)
+      axios.put(`/api/blogs/${id}`, blog)
       .then( res => {
           const blogs = this.state.blogs.map( b => {
               if (b.id === id) {
@@ -48,7 +48,7 @@ class BlogIndex extends Component {
   }
 
   deleteBlog = (id) => {
-      axios.delete(`/api/gabblogs/${id}`)
+      axios.delete(`/api/blogs/${id}`)
       .then( res => {
           const { blogs } = this.state
           this.setState({ blogs: blogs.filter( b => b.id !== id)})
@@ -62,14 +62,14 @@ class BlogIndex extends Component {
       const { adding } = this.state
       
       return( 
-       <div class='blog-page'>
-       <h1 class='blog-header'>Recent Posts</h1>
-        <div class='add-blog'>
+       <div className='blog-page'>
+       <h1 className='blog-header'>Recent Posts</h1>
+        <div className='add-blog'>
        {  
           adding ?
-          <div class='adding-blog'><BlogForm addBlog={this.addBlog} toggleAdd={this.toggleAdd} /></div>
+          <div className='adding-blog'><BlogForm addBlog={this.addBlog} toggleAdd={this.toggleAdd} /></div>
           :
-          <button class='add-blog-button' color='teal' onClick={this.toggleAdd}>New Blog</button>
+          <button className='add-blog-button' color='teal' onClick={this.toggleAdd}>New Blog</button>
         }
         </div>
        <BlogList blogs={this.state.blogs} updateBlog={this.updateBlog} deleteBlog={this.deleteBlog}/>
