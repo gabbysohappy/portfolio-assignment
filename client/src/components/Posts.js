@@ -4,19 +4,19 @@ import axios from 'axios';
 class Posts extends Component {
 state = { posts: [] }
 
-  componentDidMount() {
-    const { id } = this.props.location.state
-    let blogId = id
-    axios.get(`/api/blogs/${blogId}/posts`)
-      .then( res => {
-        this.setState({ posts: res.data })
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
+componentDidMount() {
+  const { id } = this.props.location.state
+  let blogId = id
+  axios.get(`/api/blogs/${blogId}/posts`)
+  .then( res => {
+      this.setState({ posts: res.data })
+  })
+    .catch(err => {
+      console.log(err)
+    })
+}
 
-  render() {
+render() {
     const { posts } = this.state
     return(
       <>
