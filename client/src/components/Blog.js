@@ -16,7 +16,7 @@ class Blog extends Component {
     var date = moment(created_at).format('MMM Do YY')
   
     return(  
-        <div class='blog-entry'>  
+        <div className='blog-entry'>  
         {
           editing
           ?
@@ -26,18 +26,18 @@ class Blog extends Component {
             <h3>{title}</h3>
             <p><i>{date}</i></p>
             <p>{body}</p>
-            <div class='bottom-links'>
-            <Link to={{
-                  pathname: `/${id}/posts`,
-                  state: {...id}
+            <div className='bottom-links'>
+            <Link className='comments-link' to={{
+                  pathname: `/blogs/${id}/posts`,
+                  state: { id }
                 }}>
-                  Comment
-                </Link>
-            <div class='blog-buttons'>
-            <button class='edit-blog-button' onClick={ () => this.toggleEdit() }>
+                  Comments
+            </Link>
+            <div className='blog-buttons'>
+            <button className='edit-blog-button' onClick={ () => this.toggleEdit() }>
               Edit
             </button>    
-            <button class='delete-blog-button' onClick={ () => deleteBlog(id) }>
+            <button className='delete-blog-button' onClick={ () => deleteBlog(id) }>
              Delete
             </button>
             </div>

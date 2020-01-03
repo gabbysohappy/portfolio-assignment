@@ -62,14 +62,14 @@ class BlogIndex extends Component {
       const { adding } = this.state
       
       return( 
-       <div class='blog-page'>
-       <h1 class='blog-header'>Recent Posts</h1>
-        <div class='add-blog'>
+       <div className='blog-page'>
+       <h1 className='blog-header'>Recent Posts</h1>
+        <div className='add-blog'>
        {  
           adding ?
-          <div class='adding-blog'><BlogForm addBlog={this.addBlog} toggleAdd={this.toggleAdd} /></div>
+          <div className='adding-blog'><BlogForm addBlog={this.addBlog} toggleAdd={this.toggleAdd} /></div>
           :
-          <button class='add-blog-button' color='teal' onClick={this.toggleAdd}>New Blog</button>
+          <button className='add-blog-button' color='teal' onClick={this.toggleAdd}>New Blog</button>
         }
         </div>
        <BlogList blogs={this.state.blogs} updateBlog={this.updateBlog} deleteBlog={this.deleteBlog}/>
