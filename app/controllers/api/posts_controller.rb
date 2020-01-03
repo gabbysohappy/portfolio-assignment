@@ -9,7 +9,6 @@ class Api::PostsController < ApplicationController
         @post = @blog.posts.new(posts_params)
         if @post.save
             render json: @post
-
         else
             render json: { errors: @post.errors }, status: :unprocessable_entity
         end

@@ -38,7 +38,7 @@ class BlogForm extends Component {
     return(
       <div className='blog-form'>
       <Form onSubmit={this.handleSubmit}>
-       <div class='title'>
+       <div className='title'>
         <Form.Input
           name='title'
           value={title}
@@ -47,7 +47,7 @@ class BlogForm extends Component {
           required
         />
         </div>
-        <div class='body'>
+        <div className='body'>
         <Form.TextArea 
           rows='8'
           name='body'
@@ -57,7 +57,7 @@ class BlogForm extends Component {
           required
         />
         </div>
-        <button class='submit-button' type='submit'>Submit</button>
+        <button className='submit-button' type='submit'>Submit</button>
       </Form>
       </div>
     )

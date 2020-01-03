@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 class Posts extends Component {
-state = { posts: [] }
+state = { posts: [], blog: {} }
+
 
 componentDidMount() {
   const { id } = this.props.location.state

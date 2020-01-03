@@ -16,7 +16,7 @@ const Skills = () => (
 
   <div className='ven-container'>
   <img className='ven' src={require('../../images/ven3.png')} alt='ven-diagram'/>
-  <div classv='qa-skills'>
+  <div className='qa-skills'>
     <ul>
     <li>Cypress.io</li>
     <li>Selenium</li>

@@ -16,7 +16,7 @@ const Portfolio = () => (
 
     <div className='doctor-container'>
    <img className='img-doctor' src='https://images.unsplash.com/photo-1453847668862-487637052f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80' alt='credit:Jesse Orrico(Unsplash.com)' />
-    <div classv='hover-text-doctor'>
+    <div className='hover-text-doctor'>
     <a href='https://github.com/gabbysohappy/Doctor_Office' target='_blank' rel="noopener noreferrer">Visit the Github Repo</a>
     </div>
     <p className='doctor-office-name'>Doctor Office</p>

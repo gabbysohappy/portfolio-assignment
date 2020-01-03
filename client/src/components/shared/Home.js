@@ -13,7 +13,7 @@ const Home = () => (
     </div>
 
     <Skills />
-    
+
     <Work />
 
     <Portfolio />
