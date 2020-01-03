@@ -1,6 +1,6 @@
 5.times do 
-    blog = GabBlog.create(
-      title: Faker::Lorem.words(number: 1),
+    blog = Blog.create(
+      title: Faker::Book.title,
       body: Faker::Lorem.paragraph(sentence_count: 5),
     )
   
@@ -8,7 +8,7 @@
       Post.create(
         author: Faker::Name.first_name,
         body: Faker::Lorem.paragraph(sentence_count: 1),
-        gab_blog_id: blog.id
+        blog_id: blog.id
       )
     end
   end

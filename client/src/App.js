@@ -15,7 +15,7 @@ const App = () => (
     <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/blog' component={BlogIndex} />
-          <Route exact path='/gabblog_id/posts' component={Posts} />
+          <Route exact path='/blogs/blog_id/posts' component={Posts} />
           <Route component={PageNotFound} />
     </Switch>
     </Container>

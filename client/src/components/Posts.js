@@ -7,7 +7,7 @@ state = { posts: [] }
   componentDidMount() {
     const { id } = this.props.location.state
     let blogId = id
-    axios.get(`/api/gabblogs/${blogId}/posts`)
+    axios.get(`/api/blogs/${blogId}/posts`)
       .then( res => {
         this.setState({ posts: res.data })
       })

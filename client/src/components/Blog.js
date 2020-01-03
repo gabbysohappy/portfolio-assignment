@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import BlogForm from './BlogForm';
 import moment from 'moment'
 import '../styles/blog.css';
@@ -27,9 +27,12 @@ class Blog extends Component {
             <p><i>{date}</i></p>
             <p>{body}</p>
             <div class='bottom-links'>
-            <NavLink exact to='/posts' class='comments-link'>
-              Comments
-            </NavLink>
+            <Link to={{
+                  pathname: `/${id}/posts`,
+                  state: {...id}
+                }}>
+                  Comment
+                </Link>
             <div class='blog-buttons'>
             <button class='edit-blog-button' onClick={ () => this.toggleEdit() }>
               Edit
