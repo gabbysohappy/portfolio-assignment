@@ -1,4 +1,7 @@
 .contact {
+    display: flexbox;
+    justify-content: center;
+    padding: 3%;
     background-color: #fce7f9;
     text-align: center;
     font-weight: bold;
@@ -6,24 +9,16 @@
 }
 
 .contact img {
-    height: 90px;
-    width: 90px;
+    height: 4em;
+    width: 4em;
+}
+
+.twitter-img {
+    border-radius: 5%;
 }
 
 .contact-links {
-    position: relative;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.gmail-img {
-    height: 90px;
-}
-
-.twitter-img, .linkedin-img {
-    height: 90px;
-    width: 90px;
+    display: inline-flexbox;
 }
 
 .contact-links a {

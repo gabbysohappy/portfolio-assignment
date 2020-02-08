@@ -4,7 +4,6 @@ import axios from 'axios';
 class Posts extends Component {
 state = { posts: [], blog: {} }
 
-
 componentDidMount() {
   const { id } = this.props.location.state
   let blogId = id
@@ -16,6 +15,19 @@ componentDidMount() {
       console.log(err)
     })
 }
+
+handleSubmit = (e) => {
+  e.preventDefault()
+  if (this.props.id) {
+    this.props.updateComment(this.props.id, this.state)
+    this.props.toggleEdit() 
+  } 
+  else {
+    this.props.addComment(this.state)
+    this.props.toggleAdd()
+  }
+  this.setState({ author: '', body: ''})
+  }
 
 render() {
     const { posts } = this.state

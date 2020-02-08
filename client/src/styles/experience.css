@@ -1,11 +1,13 @@
 .experience {
+    display: flexbox;
     background-color: #fce7f9;
     padding-top: 6%;
     padding-bottom: 8%;
     padding-left: 8%;
     padding-right: 8%;
-}
+}   
 
 .experience h2 {
     text-align: center;
 }
+
